@@ -16,6 +16,7 @@
 		01A365732936745000DB6313 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A365722936745000DB6313 /* UpcomingViewController.swift */; };
 		01A365752936745700DB6313 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A365742936745700DB6313 /* SearchViewController.swift */; };
 		01A365772936749800DB6313 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A365762936749800DB6313 /* DownloadViewController.swift */; };
+		01A3657C29367C3C00DB6313 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3657B29367C3C00DB6313 /* CollectionViewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		01A365722936745000DB6313 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		01A365742936745700DB6313 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		01A365762936749800DB6313 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
+		01A3657B29367C3C00DB6313 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,9 @@
 		01A3655A293671E100DB6313 /* Netflix Clone */ = {
 			isa = PBXGroup;
 			children = (
+				01A3657A29367C1700DB6313 /* Models */,
+				01A3657929367BFC00DB6313 /* ViewModels */,
+				01A3657829367BF700DB6313 /* Views */,
 				01A3656F2936743900DB6313 /* Controllers */,
 				01A3655B293671E100DB6313 /* AppDelegate.swift */,
 				01A3655D293671E100DB6313 /* SceneDelegate.swift */,
@@ -82,6 +87,28 @@
 				01A365762936749800DB6313 /* DownloadViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		01A3657829367BF700DB6313 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01A3657B29367C3C00DB6313 /* CollectionViewTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		01A3657929367BFC00DB6313 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		01A3657A29367C1700DB6313 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +183,7 @@
 			files = (
 				01A365752936745700DB6313 /* SearchViewController.swift in Sources */,
 				01A36560293671E100DB6313 /* MainTabBarVc.swift in Sources */,
+				01A3657C29367C3C00DB6313 /* CollectionViewTableViewCell.swift in Sources */,
 				01A3655C293671E100DB6313 /* AppDelegate.swift in Sources */,
 				01A365772936749800DB6313 /* DownloadViewController.swift in Sources */,
 				01A3655E293671E100DB6313 /* SceneDelegate.swift in Sources */,
