@@ -30,6 +30,8 @@ class HomeViewController: UIViewController {
         
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeTableView.tableHeaderView = headerView
+        
+        getMovies()
     }
     
     override func viewDidLayoutSubviews() {
@@ -50,6 +52,19 @@ class HomeViewController: UIViewController {
         ]
         
         navigationController?.navigationBar.tintColor = .label
+    }
+    
+    private func getMovies() {
+        APICaller.shared.getTrendingMovies { results in
+            switch results {
+                
+            case .success(let movie):
+                print(movie)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
@@ -81,10 +96,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        //Tableview header textlabel customization
         guard let header = view as? UITableViewHeaderFooterView else { return }
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.textColor = .label
+        header.textLabel?.text = header.textLabel?.text?.lowercased()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
