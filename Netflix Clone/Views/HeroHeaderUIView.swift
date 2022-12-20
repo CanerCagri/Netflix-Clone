@@ -11,6 +11,7 @@ import UIKit
 class HeroHeaderUIView: UIView {
     
     private let playButton: UIButton = {
+        
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Play", for: .normal)
@@ -21,6 +22,7 @@ class HeroHeaderUIView: UIView {
     }()
     
     private let downloadButton: UIButton = {
+        
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Download", for: .normal)
@@ -31,6 +33,7 @@ class HeroHeaderUIView: UIView {
     }()
     
     private let heroImageView: UIImageView = {
+        
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true

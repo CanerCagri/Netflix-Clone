@@ -13,6 +13,7 @@ class SearchResultsViewController: UIViewController {
     public var titles: [Title] = [Title]()
     
     public let searchResultsCollectionView: UICollectionView = {
+        
         var layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3 - 10, height: 200)
         layout.minimumInteritemSpacing = 0

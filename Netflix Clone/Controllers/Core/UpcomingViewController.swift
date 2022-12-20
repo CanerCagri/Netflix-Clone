@@ -13,6 +13,7 @@ class UpcomingViewController: UIViewController {
     private  var titles: [Title] = [Title]()
     
     private let upcomingTableView: UITableView = {
+        
         var tableView = UITableView()
         tableView.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
         return tableView

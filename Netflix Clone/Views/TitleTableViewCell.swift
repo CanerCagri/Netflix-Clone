@@ -13,6 +13,7 @@ class TitleTableViewCell: UITableViewCell {
     static let identifier = "TitleTableViewCell"
     
     private let playButton: UIButton = {
+        
         var button = UIButton()
         let image = UIImage(systemName: "play.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 30))
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -23,12 +24,14 @@ class TitleTableViewCell: UITableViewCell {
     }()
     
     private let titleLabel: UILabel = {
+        
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let titlePosterImageView: UIImageView = {
+        
         var imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill

@@ -13,12 +13,14 @@ class SearchViewController: UIViewController {
     private  var titles: [Title] = [Title]()
     
     private let searchTableView: UITableView = {
+        
         var tableView = UITableView()
         tableView.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
         return tableView
     }()
     
     private let searchController: UISearchController = {
+        
         var controller = UISearchController(searchResultsController: SearchResultsViewController())
         controller.searchBar.placeholder = "Search for a Movie or Tv show"
         controller.searchBar.searchBarStyle = .minimal
