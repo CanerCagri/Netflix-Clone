@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class UpcomingViewController: UIViewController {
     
     private  var titles: [Title] = [Title]()
@@ -21,7 +22,6 @@ class UpcomingViewController: UIViewController {
         super.viewDidLoad()
 
         configureViewController()
-        configureTableView()
         fetchUpcoming()
     }
     
@@ -30,14 +30,12 @@ class UpcomingViewController: UIViewController {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
-    }
-    
-    private func configureTableView() {
+        
         view.addSubview(upcomingTableView)
         upcomingTableView.delegate = self
         upcomingTableView.dataSource = self
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         upcomingTableView.frame = view.bounds
@@ -75,6 +73,4 @@ extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
-    
-    
 }
